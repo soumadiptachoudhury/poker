@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ddmlys6dvjwle"]
+
+[ext_resource type="Texture2D" uid="uid://cyenunimfvq52" path="res://Assets/cards/card-back.png" id="1_0qqmn"]
+
+[node name="Card" type="Control" unique_id=136273473]
+custom_minimum_size = Vector2(140, 200)
+custom_maximum_size = Vector2(140, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardImage" type="TextureRect" parent="." unique_id=1794831100]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -5.0
+offset_right = 23.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0qqmn")
+expand_mode = 3
+stretch_mode = 5
