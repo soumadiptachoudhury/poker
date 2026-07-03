@@ -1,23 +1,60 @@
 [gd_scene format=3 uid="uid://0eo763arviv5"]
 
-[node name="PokerTable" type="Control" unique_id=1221438615]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="Texture2D" uid="uid://ci6cwax8k13hk" path="res://Assets/cards/table.png" id="1_178je"]
+[ext_resource type="Script" uid="uid://b4ddy648ar00p" path="res://Scripts/core/seat_manager.gd" id="2_ekauq"]
+[ext_resource type="PackedScene" uid="uid://d0ttksbpbv5l2" path="res://Scenes/seat.tscn" id="3_1odgq"]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1192560712]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.105882354, 0.36862746, 0.1254902, 1)
+[node name="PokerTable" type="Node" unique_id=1088862941]
 
-[node name="Table" type="TextureRect" parent="." unique_id=24827414]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Table" type="Sprite2D" parent="." unique_id=1515693645]
+position = Vector2(978, 539.99994)
+scale = Vector2(13, 8.5)
+texture = ExtResource("1_178je")
+
+[node name="DeckPosition" type="Marker2D" parent="." unique_id=767603220]
+
+[node name="CommunityCards" type="Node" parent="." unique_id=309758043]
+
+[node name="Flop1" type="Marker2D" parent="CommunityCards" unique_id=2053327864]
+
+[node name="Flop2" type="Marker2D" parent="CommunityCards" unique_id=1673501468]
+
+[node name="Flop3" type="Marker2D" parent="CommunityCards" unique_id=560604143]
+
+[node name="Turn" type="Marker2D" parent="CommunityCards" unique_id=757785405]
+
+[node name="River" type="Marker2D" parent="CommunityCards" unique_id=1895252175]
+
+[node name="Seats" type="Node" parent="." unique_id=2138854967]
+script = ExtResource("2_ekauq")
+seat_scene = ExtResource("3_1odgq")
+
+[node name="Seat1" parent="Seats" unique_id=475864565 instance=ExtResource("3_1odgq")]
+position = Vector2(-90, 30)
+
+[node name="Seat2" parent="Seats" unique_id=691126648 instance=ExtResource("3_1odgq")]
+position = Vector2(364, -26)
+
+[node name="Seat3" parent="Seats" unique_id=1741839719 instance=ExtResource("3_1odgq")]
+position = Vector2(831, -20)
+
+[node name="Seat4" parent="Seats" unique_id=715528898 instance=ExtResource("3_1odgq")]
+position = Vector2(1318, -21)
+
+[node name="Seat5" parent="Seats" unique_id=636741934 instance=ExtResource("3_1odgq")]
+position = Vector2(1519, 630)
+
+[node name="Seat6" parent="Seats" unique_id=536479343 instance=ExtResource("3_1odgq")]
+position = Vector2(1122, 671)
+
+[node name="Seat7" parent="Seats" unique_id=1314824388 instance=ExtResource("3_1odgq")]
+position = Vector2(687, 675)
+
+[node name="Seat8" parent="Seats" unique_id=385907893 instance=ExtResource("3_1odgq")]
+position = Vector2(257, 680)
+
+[node name="Seat9" parent="Seats" unique_id=2111010318 instance=ExtResource("3_1odgq")]
+position = Vector2(-115, 616)
+
+[node name="PotPosition" type="Marker2D" parent="." unique_id=1291851254]
+position = Vector2(-288, -126)

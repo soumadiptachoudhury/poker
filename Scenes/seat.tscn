@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d0ttksbpbv5l2"]
+
+[node name="Scene" type="Node2D" unique_id=475864565]
+
+[node name="card1" type="Marker2D" parent="." unique_id=2120738739]
+position = Vector2(181, 152)
+
+[node name="card2" type="Marker2D" parent="." unique_id=43816504]
+position = Vector2(388, 151)
+
+[node name="DealerButtonPosition" type="Marker2D" parent="." unique_id=795273412]
+position = Vector2(292, 78)
+
+[node name="ChipPosition" type="Marker2D" parent="." unique_id=553095172]
+position = Vector2(287, 254)
+
+[node name="NamePosition" type="Marker2D" parent="." unique_id=1979567099]
+position = Vector2(290, 347)
+
+[node name="NameLabel" type="Label" parent="." unique_id=356632171]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StackLabel" type="Label" parent="." unique_id=479223815]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BetLabel" type="Label" parent="." unique_id=851469842]
+offset_right = 40.0
+offset_bottom = 23.0
